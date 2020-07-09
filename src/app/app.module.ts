@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MeuComponenteComponent } from './componentes/meu-componente/meu-componente.component';
+import { SegundoComponenteComponent } from './componentes/segundo-componente/segundo-componente.component';
+import { ApiComponent } from './componentes/api/api.component';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MeuComponenteComponent,
+    SegundoComponenteComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
